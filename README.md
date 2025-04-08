@@ -34,7 +34,7 @@ Wanna say hi or collab on a project?
 
 - 💌 **Email**:  okhiriatehilah@gmail.com
 - 🐙 **GitHub**: [@teehcodes](https://github.com/teehcodes)  
-- 🐦 **Twitter**: [@teehcodes](https://x.com/ok_tehi)
+- 🐦 **Twitter**: [@Tehilah](https://x.com/ok_tehi)
 
 ---
 
