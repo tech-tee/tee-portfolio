@@ -1,3 +1,30 @@
+// src/theme/theme.d.ts
+import { PaletteOptions } from '@mui/material/styles';
+
+declare module '@mui/material/styles' {
+  interface Palette {
+    custom: {
+      lightBrown: string;
+      caramel: string;
+      mocha: string;
+      chocolate: string;
+      darkBrown: string;
+      cream: string;
+      accentRed: string;
+    };
+  }
+  interface PaletteOptions {
+    custom: {
+      lightBrown?: string;
+      caramel?: string;
+      mocha?: string;
+      chocolate?: string;
+      darkBrown?: string;
+      cream?: string;
+      accentRed?: string;
+    };
+  }
+}
 // src/theme/theme.ts
 import { createTheme } from '@mui/material/styles';
 
@@ -19,7 +46,6 @@ const theme = createTheme({
       primary: '#1e1e1e', // soft black
       secondary: '#5c4033', // brownish text for accent
     },
-    // Extra brown tones
     custom: {
       lightBrown: '#f5e0c3',
       caramel: '#d2b48c',
