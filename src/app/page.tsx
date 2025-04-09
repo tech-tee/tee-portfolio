@@ -74,7 +74,7 @@ const Home = () => {
         >
           <Box sx={{ textAlign: 'left', maxWidth: '600px' }}>
             <Typography variant="h2" fontWeight="bold" gutterBottom>
-              Hi, I'm a Developer!
+              Hi, I&apos;m a Developer!
             </Typography>
             <Typography variant="h5" paragraph>
               I create web applications that are fast, responsive,<br /> and user-friendly. Welcome to my portfolio!
@@ -91,9 +91,27 @@ const Home = () => {
           </Box>
         </Container>
       </Box>
-
-      {/* Skills Section with Swiper Carousel */}
       <Box
+        component={motion.div}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        sx={{
+          padding: '60px 20px',
+          backgroundColor: 'white',
+          textAlign: 'center',
+        }}
+      >
+        <Typography variant="h4" gutterBottom>
+          About Me
+        </Typography>
+        <Typography variant="body1" maxWidth="700px" margin="0 auto">
+          I&apos;m a web developer with a passion for creating beautiful and functional websites. 
+          I love working with modern web technologies and constantly strive to learn and improve my skills.
+        </Typography>
+      </Box>
+            <Box
         component={motion.div}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +121,7 @@ const Home = () => {
           padding: '60px 20px',
           textAlign: 'center',
           color: theme.palette.text.primary,
-          clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0% 100%)', // Aligned with diagonal
+          backgroundColor: theme.palette.custom.darkBrown,
         }}
       >
         <Typography variant="h4" gutterBottom>
@@ -135,7 +153,7 @@ const Home = () => {
               sx={{
                 padding: '20px',
                 borderRadius: '15px',
-                backgroundColor: 'transparent',
+                backgroundColor: 'white',
                 boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.05)',
                 display: 'flex',
                 flexDirection: 'column',
@@ -162,7 +180,7 @@ const Home = () => {
               sx={{
                 padding: '20px',
                 borderRadius: '15px',
-                backgroundColor: 'transparent',
+                backgroundColor: 'white',
                 boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.05)',
                 display: 'flex',
                 flexDirection: 'column',
@@ -189,7 +207,7 @@ const Home = () => {
               sx={{
                 padding: '20px',
                 borderRadius: '15px',
-                backgroundColor: 'transparent',
+                backgroundColor: 'white',
                 boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.05)',
                 display: 'flex',
                 flexDirection: 'column',
@@ -238,8 +256,6 @@ const Home = () => {
           </SwiperSlide>
         </Swiper>
       </Box>
-
-      {/* About Section */}
       <Box
         component={motion.div}
         initial={{ opacity: 0, y: 50 }}
@@ -253,13 +269,45 @@ const Home = () => {
         }}
       >
         <Typography variant="h4" gutterBottom>
-        About Me </Typography> <Typography variant="body1" maxWidth="700px" margin="0 auto"> 
-          I'm a web developer with a passion for creating beautiful and functional websites. 
-          I love working with modern web technologies and constantly strive to learn and improve my skills. 
-          </Typography> 
-          </Box> 
-          </div> 
-          ); 
-        };
+          My Projects
+        </Typography>
+        <Typography variant="body1" maxWidth="700px" margin="0 auto">
+          Take a look at some of the projects I have worked on. From small personal projects to large-scale applications,
+          each project reflects my dedication to creating user-centered solutions.
+        </Typography>
+      </Box>
+      
+      {/* Contact Section */}
+      <Box
+        component={motion.div}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        sx={{
+          padding: '60px 20px',
+          backgroundColor: theme.palette.custom.lightBrown,
+          textAlign: 'center',
+        }}
+      >
+        <Typography variant="h4" gutterBottom>
+          Contact Me
+        </Typography>
+        <Typography variant="body1" maxWidth="700px" margin="0 auto">
+          Have any questions or want to get in touch? Feel free to reach out to me. I&apos;d love to hear from you!
+        </Typography>
+        <Button
+          variant="contained"
+          color="primary"
+          sx={{ marginTop: 2 }}
+          component={Link}
+          href="/contact"
+        >
+          Get In Touch
+        </Button>
+      </Box>
+    </div>
+  );
+};
 
 export default Home;
